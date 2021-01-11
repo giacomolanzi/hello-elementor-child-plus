@@ -24,10 +24,10 @@ function hello_elementor_child_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
 
 /*	****************************  */
-/*  Useful function for security  */
+/*      Useful function for security  */
 /*	****************************  */
 
-/* _Forgot Password_ function avialable only for $admin_can_change
+_Forgot Password_ function avialable only for $admin_can_change
 $admin_can_change = '';
 add_filter( 'show_password_fields', function() {
     if ( is_admin() && ! current_user_can( $admin_can_change ) ) {
@@ -35,7 +35,23 @@ add_filter( 'show_password_fields', function() {
     }
     return true;
 } );
-*/
+
+// Shortcode to place post content where you want
+function wpc_elementor_shortcode( $atts ) {
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+	the_content();
+	endwhile; else: ?>
+	<p>Sorry, no posts matched your criteria.</p>
+	<?php endif;
+}
+add_shortcode( 'my_elementor_postcontent', 'wpc_elementor_shortcode');
+
+// Shortcode to place post content where you want, but shorter
+function wpc_elementor_shortcode_2( $atts ) {
+	echo get_post_field('post_content', $post->ID);
+}
+add_shortcode( 'my_elementor_postcontent_shorter', 'wpc_elementor_shortcode_2');
+
 
 /* Nascondi utente dalla lista
 
