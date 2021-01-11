@@ -23,12 +23,12 @@ function hello_elementor_child_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
 
-/*	****************************  */
-/*      Useful function for security  */
-/*	****************************  */
+/********************************/
+/* Useful functions for security */
+/********************************/
 
-_Forgot Password_ function avialable only for $admin_can_change
-$admin_can_change = '';
+// _Forgot Password_ function avialable only for $admin_can_change
+$admin_can_change = ''; // put admin user here
 add_filter( 'show_password_fields', function() {
     if ( is_admin() && ! current_user_can( $admin_can_change ) ) {
         return false;
@@ -36,7 +36,7 @@ add_filter( 'show_password_fields', function() {
     return true;
 } );
 
-// Shortcode to place post content where you want
+// Shortcode to place *post content* where you want
 function wpc_elementor_shortcode( $atts ) {
     if ( have_posts() ) : while ( have_posts() ) : the_post();
 	the_content();
@@ -53,7 +53,7 @@ function wpc_elementor_shortcode_2( $atts ) {
 add_shortcode( 'my_elementor_postcontent_shorter', 'wpc_elementor_shortcode_2');
 
 
-/* Nascondi utente dalla lista
+// Nascondi utente dalla lista
 
 add_action('pre_user_query','site_pre_user_query');
 function site_pre_user_query($user_search) {
