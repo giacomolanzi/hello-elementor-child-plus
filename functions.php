@@ -1,13 +1,11 @@
 <?php
 /**
  * Theme functions and definitions
- *
  * @package HelloElementorChild
  */
 
 /**
  * Load child theme css and optional scripts
- *
  * @return void
  */
 function hello_elementor_child_enqueue_scripts() {
