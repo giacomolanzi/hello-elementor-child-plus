@@ -15,3 +15,20 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 /*
     Add your custom styles here
 */
+
+/*
+    Allow images to adapt in order to cover vertically 100% of the available space.
+    Add the class="extended-high" to the image to allow it to cover the whole vertical space available.
+    Better suited for image on the side of text in two different column.
+*/
+.extended-high, 
+.extended-high .elementor-widget-container, 
+.extended-high .elementor-image, 
+selector .elementor-image a {
+    height: 100%;
+}
+.extended-high .elementor-image img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  height: 100%;
+}
