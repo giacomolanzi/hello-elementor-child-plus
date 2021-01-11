@@ -71,15 +71,15 @@ function site_pre_user_query($user_search) {
 }
 */
 
-/*REMOVE SIMPLY DISCOVER*/
+// REMOVE SIMPLY DISCOVER
 remove_action('wp_head', 'rsd_link');
-/*REMOVE WP VERSION*/
+// REMOVE WP VERSION
 remove_action('wp_head', 'wp_generator');
-/*RIMUOVE RSS LINK*/
+// RIMUOVE RSS LINK
 remove_action('wp_head', 'feed_links', 2);
-/*RIMUOVE EXTRA FEED LINKS*/
+// RIMUOVE EXTRA FEED LINKS
 remove_action('wp_head', 'feed_links_extra', 3);
-/*RIMUOVE SUPPORTO WINDOWS LIVE WRITER*/
+// RIMUOVE SUPPORTO WINDOWS LIVE WRITER
 remove_action('wp_head', 'wlwmanifest_link');
-/*REMOVE SHORTLINKS*/
+// REMOVE SHORTLINKS
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
