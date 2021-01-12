@@ -28,7 +28,7 @@ add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
 // _Forgot Password_ function avialable only for $admin_can_change
 $admin_can_change = ''; // put admin user here
 add_filter( 'show_password_fields', function() {
-    if ( is_admin() && ! current_user_can( $admin_can_change ) ) {
+    if ( is_admin() && ! current_user_can( $admin_can_change ) ) { //     if ( is_admin() && ! current_user_can( 'administrator' ) ) { 
         return false;
     }
     return true;
