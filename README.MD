@@ -54,13 +54,3 @@ Yes, ***but*** best practice is to use the styling capabilities in the Elementor
 
 This theme, like WordPress, is licensed under the GPL.
 Use it as your springboard to building a site with ***Elementor***.
-
-Hello Elementor bundles the following third-party resources:
-
-Font Awesome icons for theme screenshot
-License: SIL Open Font License, version 1.1.
-Source: https://fontawesome.com/v4.7.0/
-
-Image for theme screenshot, Copyright Jason Blackeye
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/4B83RD7BV9
