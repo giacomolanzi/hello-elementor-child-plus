@@ -12,15 +12,10 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
 */
 
-/*
-    Add your custom styles here
-*/
+/*#  Allow images to adapt in order to cover vertically 100% of the available space.
+  #  Add the class="extended-high" to the image to allow it to cover the whole vertical space available.
+  #  Better suited for image on the side of text in two different column. */
 
-/*
-    Allow images to adapt in order to cover vertically 100% of the available space.
-    Add the class="extended-high" to the image to allow it to cover the whole vertical space available.
-    Better suited for image on the side of text in two different column.
-*/
 .extended-height, 
 .extended-height .elementor-widget-container, 
 .extended-height .elementor-image, 
