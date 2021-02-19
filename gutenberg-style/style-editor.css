@@ -1,0 +1,81 @@
+/*
+This file contains the style for Gutenberg Editor.
+Change this to modify the aspect of the editor page
+*/
+
+@import url('https://fonts.googleapis.com/css');
+
+body {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height:32px;
+	color:#333;
+}
+.wp-block {
+	max-width: 680px;
+}
+.wp-block[data-align=wide] { /* it can be "data-align=full" and also "right", "left" and "center" */
+    max-width: 775px;
+}
+
+/* === Title === */
+
+	.editor-post-title__input {
+		color: #323C79;
+		font-family: "Advent Pro";
+		font-size: 60px;
+		font-weight: 200;
+}
+
+/* === Text Format === */
+
+p {
+	text-indent: 0.5em;
+}
+a {
+	color:#d4527d;
+}
+a:hover {
+	color:#323C79;
+}
+
+blockquote {
+		font-style: normal;
+    display: block;
+    margin:1em 40px;
+    padding:0px 40px;
+    border-left:solid #323C79 4px;
+}
+blockquote cite, wp-block-quote__citation {
+    font-size: 90%;
+    color:#888;
+}
+
+h2 {
+	font-family: "Advent Pro";
+	font-size:32px;
+	line-height:38px;
+	color:#323c79;
+}
+h3 {
+	font-family:"Advent Pro";
+	font-sixe:28px;
+	line-height:34px;
+	color:#323c79;
+}
+
+/* === Table === */
+
+table td{
+    padding:5px;
+}
+table thead, table tbody tr td:first-child {
+    font-weight: bold;
+}
+table.tabella-prezzi-articolo td ul {
+    padding-left:1px;
+    list-style-type: none;
+}
+table.tabella-prezzi-articolo td ul li{
+    text-indent: 5px;
+}
