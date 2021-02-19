@@ -83,3 +83,13 @@ remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'wlwmanifest_link');
 /*REMOVE SHORTLINKS*/
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+/* Load Gutenberg stylesheet located in 'gutenberg-style/style-editor.css' */
+add_action('after_setup_theme','planb_gutenberg_css');
+
+	function planb_gutenberg_css(){
+
+		add_theme_support('editor-styles');
+		add_editor_style('gutenberg-style/style-editor.css');
+
+}
