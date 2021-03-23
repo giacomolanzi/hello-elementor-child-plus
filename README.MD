@@ -8,7 +8,7 @@ I use this child theme with my client, to insert in my websites functionalities 
 
 * Contributors: Giacomo Lanzi
 * Requires at least: WordPress 4.7
-* Tested up to: WordPress 5.6
+* Tested up to: WordPress 5.7
 * Stable tag: 1.0.0
 * Version: 1.0.1
 * Requires PHP: 7.x
