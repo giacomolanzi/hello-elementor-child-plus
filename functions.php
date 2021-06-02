@@ -16,7 +16,7 @@ function hello_elementor_child_enqueue_scripts() {
 		[
 			'hello-elementor-theme-style', // Dependencies
 		],
-		rand(111,999)
+		rand(111,999) // Version
 	);
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );
